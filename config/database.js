@@ -8,7 +8,6 @@ const {
   DB_PORT,
   DB_PASS,
   DB_DATABASE } = process.env
-//
 module.exports = {
     host: DB_HOST,
     dialect: DB_DIALECT,
