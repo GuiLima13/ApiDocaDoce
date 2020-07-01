@@ -10,7 +10,7 @@ const UsuariosController ={
     store:async (req,res)=>{
 
         const {nome,email,senha,telefone,cpf} = req.body
-        
+        try {
             const usuario = await Usuarios.create({
                 nome,
                 email,
@@ -22,7 +22,9 @@ const UsuariosController ={
             
 
             return res.status(201).json(usuario);
-        
+        } catch (error) {
+            return res.status(401)
+        }
         
     }
 
