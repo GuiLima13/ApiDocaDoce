@@ -10,7 +10,7 @@ var usuarioRouter = require('./routes/usuarioRouter');
 var app = express();
 
     app.use(cors({
-        " origen " : " * " , 
+        " origin " : " * " , 
         " methods " : " GET, HEAD, PUT, PATCH, POST, DELETE " , 
         " preflightContinue " : false , 
         " optionsSuccessStatus " : 204 
