@@ -9,7 +9,12 @@ var usuarioRouter = require('./routes/usuarioRouter');
 
 var app = express();
 
-    app.use(cors({allowedHeaders:['Content-Type', 'Authorization']}))
+    app.use(cors({
+        " origem " : " * " , 
+        " methods " : " GET, HEAD, PUT, PATCH, POST, DELETE " , 
+        " preflightContinue " : false , 
+        " optionsSuccessStatus " : 204 
+      }))
 
 app.use(logger('dev'));
 app.use(express.json());
